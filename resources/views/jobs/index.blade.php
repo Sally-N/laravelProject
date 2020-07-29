@@ -1,14 +1,13 @@
-@extends('layouts.app')
-
+@extends('pages.jobs')
 @section('content')
-     <h1>{{$failedjobs->title}} </h1>
-     @if(count($failedjobs) > 0)
-     @foreach($failedjobs as $failedjob)
+     <h1>Jobs </h1>
+     @if(count($datas) > 0)
+     @foreach($datas as $failedjob)
          <div class="well"> 
-              <h3><a href="/failedjobs/{{$failedjobs->id}}"{{$failedjob->title}}></h3>
-              <small> Written on {{$failedjobs->created_at}}</small>
-         </div>
-         
+              <h2><a href="/failedjobs/{{$failedjob ->connection}}" a></h2>
+              <small> Written on {{$failedjob  ->created_at}}</small>
+         </div> 
+      @endforeach           
      @else 
      <p>No failed jobs found</p>
      @endif

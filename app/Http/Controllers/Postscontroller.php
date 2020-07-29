@@ -3,6 +3,14 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+
+class Postscontroller extends Controller
+{
+    //<?php
+
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
 use App\FailedJobs;
 
 class PostController extends Controller
@@ -84,4 +92,6 @@ class PostController extends Controller
     {
         //
     }
+}
+
 }

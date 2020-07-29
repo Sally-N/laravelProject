@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class FailedJobs extends Model
 {
     //Table Name
-    protected $table = 'FailedJobs';
+    protected $table = 'failed_jobs';
     //Primary key
     public $primarykey = 'id';
     //Timestamps

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\FailedJobs;
 
 class PagesController extends Controller
 {
@@ -36,11 +37,10 @@ class PagesController extends Controller
 }
 
 public function failedJobs(){
-    $data = array(
-        'title' => 'services',
-        'services' => ['Web design', 'Programmming', 'SEO']
-    );
- return view('pages.services')->with($data);
+
+    $data = FailedJobs::all();
+  
+ return view('pages.jobs')->with('datas',$data);
 }
 
 }
