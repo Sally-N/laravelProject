@@ -1,6 +1,7 @@
 @extends('layouts.other')
 
-@section('content')    
+@section('content')
+    {{--CHANGES  --}}
 
 
     <div class="jumbotron">
