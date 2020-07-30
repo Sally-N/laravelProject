@@ -36,11 +36,11 @@ class PagesController extends Controller
     return view('pages.services')->with($data);
 }
 
-public function failedJobs(){
+public function posts(){
 
-    $data = FailedJobs::all();
+    $title = 'posts';
   
- return view('pages.jobs')->with('datas',$data);
+ return view('pages.post')->with('title', $title);
 }
 
 }

@@ -17,8 +17,8 @@
             <div class="dropdown-menu" aria-labelledby="dropdown01">
              <li><a href="/">Home</a></li>
              <li><a href="/about">About</a></li>
-             <li><a href="/services">$services => services</a></li>
-             <li><a href="/failedjobs">Blog</a></li>
+             <li><a href="/services">services</a></li>
+             <li><a href="/posts">Blog</a></li>
             </ul>
           </div> 
           </div>

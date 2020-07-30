@@ -3,27 +3,20 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Post;
 
-class Postscontroller extends Controller
-{
-    //<?php
-
-namespace App\Http\Controllers;
-
-use Illuminate\Http\Request;
-use App\FailedJobs;
-
-class PostController extends Controller
+class Postscontroller extends Controller 
 {
     /**
      * Display a listing of the resource.
-     *
+     * 
      * @return \Illuminate\Http\Response
      */
     public function index()
     {
-        $failedjobs = 'FailedJobs';
-        return view('FailedJobs.index')->with('failedjobs', $failedjobs);
+        $posts = Post::orderBy('title', 'asc')->get();
+        // return Post::where('title','Post One')->get();
+        return view('posts.index')->with('posts', $posts);
     }
 
     /**
@@ -55,8 +48,9 @@ class PostController extends Controller
      */
     public function show($id)
     {
-        $failedjobs= FailedJobs::find($id);
-        return view('failedjobs.show')->with('failedjobs', $failedjobs);
+        $posts = Post::find($id);
+        return view('posts.show')->with('post', $posts);
+        
     }
 
     /**
@@ -94,4 +88,3 @@ class PostController extends Controller
     }
 }
 
-}

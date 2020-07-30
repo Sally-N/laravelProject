@@ -37,6 +37,6 @@ use Illuminate\Support\Facades\Route;
  Route::get('/', 'PagesController@index');
  Route::get('/about', 'PagesController@about');
  Route::get('/services', 'PagesController@services');
- Route::get('/failedjobs', 'PagesController@failedJobs');
+ Route::get('posts', 'PagesController@posts');
 
- Route::resource('posts', 'PostController');
+ Route::resource('posts', 'Postscontroller');
