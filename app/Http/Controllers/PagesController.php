@@ -8,9 +8,13 @@ use App\FailedJobs;
 class PagesController extends Controller
 {
    public function index(){
-       $title = 'Welcome to Laravel!';
+      
+    $data = array(
+        'title' => 'About Us',
+        'services' => ['Home','Services', 'About']
+    );
       // return view('pages.index', compact('title'));  
-       return view('pages.index')->with('title', $title); 
+       return view('pages.index')->with($data); 
    } 
 
    public function about(){
@@ -21,7 +25,7 @@ class PagesController extends Controller
        
        $data = array(
         'title' => 'About Us',
-        'services' => ['Web design', 'Programmming', 'SEO']
+        'services' => ['Home','Services', 'About']
     );
        #you need to include $data kwa hii  function 
        //return view('pages.about')->with($data); //ndio iki render the about page ipate $services
@@ -31,16 +35,22 @@ class PagesController extends Controller
    public function services(){
        $data = array(
            'title' => 'services',
-           'services' => ['Web design', 'Programmming', 'SEO']
+           'services' => ['Home','Services', 'About']
        );
     return view('pages.services')->with($data);
 }
 
-public function posts(){
+   public function posts(){
 
     $title = 'posts';
   
  return view('pages.post')->with('title', $title);
 }
 
+   public function create(){
+
+    $title = 'create post';
+
+    return view('pages.create')->with('title', $title);
+}
 }

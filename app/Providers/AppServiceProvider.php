@@ -7,6 +7,8 @@ use Illuminate\Support\Facades\Schema;
 
 class AppServiceProvider extends ServiceProvider
 {
+
+    public const HOME = '/home';
     /**
      * Register any application services.
      *

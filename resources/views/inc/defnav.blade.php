@@ -6,7 +6,7 @@
                 <a class="nav-link" href="/">Home</a>
             <a class="nav-link" href="/about">About</a>
             <a class="nav-link" href="/services">Services</a>
-            <a class="nav-link" href="/failedjobs">Blog</a>        
+            <a class="nav-link" href="/posts">Blog</a>        
             
              </ul>       
               <a class="nav-item nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
